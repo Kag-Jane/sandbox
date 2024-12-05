@@ -1,1 +1,0 @@
-{"training_epoch_average":12.325108528137207,"_wandb":{"runtime":33},"_timestamp":1.7333523764172583e+09,"test_epoch_average":13.531428337097168,"trainer/global_step":600,"_step":32,"epoch":20,"_runtime":32.992656808,"test_loss":13.53134536743164,"train_loss":12.773641586303711}
