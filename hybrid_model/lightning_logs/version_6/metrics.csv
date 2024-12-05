@@ -1,0 +1,3 @@
+epoch,step,test_epoch_average,test_loss,training_epoch_average
+0,25,,,1.2474262714385986
+1,26,5.062994956970215,5.1339287757873535,

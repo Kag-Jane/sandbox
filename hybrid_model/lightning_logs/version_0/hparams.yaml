@@ -1,0 +1,3 @@
+hidden_dim: 128
+input_dim: 81
+lr: 0.001
