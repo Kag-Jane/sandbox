@@ -42,7 +42,15 @@ The R2 score is 0.008053.
 
 #### hybrid-model
 
-MLP trained with all datasets (excepts for 7). The loss is RMSE (R2 score cannot converge). More details can be found in the [notebook](./hybrid_model/LGBM_MLP_weightd_low_mem.ipynb).
+The second best one is a GRU trained with all datasets (excepts for 7). The loss is RMSE (R2 score cannot converge). More details can be found in the [notebook](./hybrid_model/LGBM_GRU_low_mem.ipynb).
+
+The best model is avaiable [here](./hybrid_model/model_init/jane_gru_layer_2_rmse).
+
+The R2 score is -0.00103.
+
+---------
+
+The second best one is a MLP trained with all datasets (excepts for 7). The loss is RMSE (R2 score cannot converge). More details can be found in the [notebook](./hybrid_model/LGBM_MLP_low_mem.ipynb).
 
 The best model is avaiable [here](./hybrid_model/model_init/jane_mlp_hidden_32_epoch_30.ckpt).
 
