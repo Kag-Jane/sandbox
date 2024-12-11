@@ -3,7 +3,9 @@ This repo contains our approaches and solutions for the [Jane Street Real-Time M
 
 You can find following items:
 - mono_model solutions
+  - model_init
 - multi_model solutions
+  - model_init
 - example submission notebook
 
 ## Testing sumission API locally
@@ -26,3 +28,22 @@ inference_server.run_local_gateway(
     )
 )
 ```
+
+## Best models list
+
+#### mono-model
+
+LightGBM trained with all datasets (excepts for 7). The loss is RMSE. More details can be found in the [notebook](./mono_model/pipeline_LGBM_baseline.ipynb).
+
+The best model is avaiable [here](./mono_model/model_init/jane_lgbm_baseline.txt).
+
+The R2 score is 0.008053.
+
+
+#### hybrid-model
+
+MLP trained with all datasets (excepts for 7). The loss is RMSE (R2 score cannot converge). More details can be found in the [notebook](./hybrid_model/LGBM_MLP_weightd_low_mem.ipynb).
+
+The best model is avaiable [here](./hybrid_model/model_init/jane_mlp_hidden_32_epoch_30.ckpt).
+
+The R2 score is -0.00287.
