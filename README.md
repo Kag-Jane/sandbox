@@ -6,7 +6,10 @@ You can find following items:
   - model_init
 - multi_model solutions
   - model_init
-- example submission notebook
+- submission
+  - example submission notebook
+
+All the trained models and models for initialization are saved at `model_init`.
 
 ## Testing sumission API locally
 
@@ -46,6 +49,14 @@ The second best one is a GRU trained with all datasets (excepts for 7). The loss
 
 The best model is avaiable [here](./hybrid_model/model_init/jane_gru_layer_2_rmse).
 
+Here is a brief summary of its parameters:
+
+|  | Name      | Type    | Params | Mode |
+|- | -         | -       | -      | -    |
+|0 | gru       | GRU     | 53.2 K | train|
+|1 | fc        | Linear  | 65     | train|
+|2 | criterion | MSELoss | 0      | train|
+
 The R2 score is -0.00103.
 
 ---------
@@ -53,5 +64,12 @@ The R2 score is -0.00103.
 The second best one is a MLP trained with all datasets (excepts for 7). The loss is RMSE (R2 score cannot converge). More details can be found in the [notebook](./hybrid_model/LGBM_MLP_low_mem.ipynb).
 
 The best model is avaiable [here](./hybrid_model/model_init/jane_mlp_hidden_32_epoch_30.ckpt).
+
+Here is a brief summary of its parameters:
+
+|  | Name      | Type    | Params | Mode |
+|- | -         | -       | -      | -    |
+|0 | model     | Sequential | 21.9 K | train|
+|1 | criterion | MSELoss    | 0      | train|
 
 The R2 score is -0.00287.
