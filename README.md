@@ -36,40 +36,24 @@ inference_server.run_local_gateway(
 
 #### mono-model
 
-LightGBM trained with all datasets (excepts for 7). The loss is RMSE. More details can be found in the [notebook](./mono_model/pipeline_LGBM_baseline.ipynb).
+LightGBM trained with all datasets (excepts for 3 and 7). The loss is RMSE. More details can be found in the [notebook](./best_model/lgbm_mono.ipynb).
 
-The best model is avaiable [here](./mono_model/model_init/jane_lgbm_baseline.txt).
+The best model is avaiable [here](./best_model/jane_lgbm_baseline.txt).
 
-The R2 score is 0.008053.
+The R2 score is 0.0037
 
 
 #### hybrid-model
 
-The second best one is a GRU trained with all datasets (excepts for 7). The loss is RMSE (R2 score cannot converge). More details can be found in the [notebook](./hybrid_model/LGBM_GRU_low_mem.ipynb).
+The best NN model is a MLP trained with all datasets . The loss is RMSE (R2 score cannot converge). More details can be found in the [notebook](./best_model/mlp_hybrid_low_mem.ipynb).
 
-The best model is avaiable [here](./hybrid_model/model_init/jane_gru_layer_2_rmse).
-
-Here is a brief summary of its parameters:
-
-|  | Name      | Type    | Params | Mode |
-|- | -         | -       | -      | -    |
-|0 | gru       | GRU     | 53.2 K | train|
-|1 | fc        | Linear  | 65     | train|
-|2 | criterion | MSELoss | 0      | train|
-
-The R2 score is -0.00103.
-
----------
-
-The second best one is a MLP trained with all datasets (excepts for 7). The loss is RMSE (R2 score cannot converge). More details can be found in the [notebook](./hybrid_model/LGBM_MLP_low_mem.ipynb).
-
-The best model is avaiable [here](./hybrid_model/model_init/jane_mlp_hidden_32_epoch_30.ckpt).
+The best model is avaiable [here](./best_model/mlp_hidden_256_layer_2_rmse_lr_1e5_batch_norm_dropout.ckpt).
 
 Here is a brief summary of its parameters:
 
 |  | Name      | Type    | Params | Mode |
 |- | -         | -       | -      | -    |
-|0 | model     | Sequential | 21.9 K | train|
+|0 | model     | Sequential | 87.0 K | train|
 |1 | criterion | MSELoss    | 0      | train|
 
-The R2 score is -0.00287.
+The R2 score is 0.0063.
